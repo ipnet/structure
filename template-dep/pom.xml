@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.iproute.template-dep</groupId>
+    <artifactId>template-dep</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!--    版本管理    -->
+        <commons.version>1.0-SNAPSHOT</commons.version>
+
+        <!--    当前项目版本管理    -->
+        <template.version>1.0-SNAPSHOT</template.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- dependencyManagement import pom 管理 -->
+            <dependency>
+                <groupId>org.iproute</groupId>
+                <artifactId>commons</artifactId>
+                <version>${commons.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.iproute.commons</groupId>
+                <artifactId>basic-dependencies</artifactId>
+                <version>${commons.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.iproute.commons</groupId>
+                <artifactId>cloud-dependencies</artifactId>
+                <version>${commons.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.iproute</groupId>
+                <artifactId>template</artifactId>
+                <version>${template.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+
+    <dependencies>
+        <!--    全局依赖 lombok、apache-commons 由iproute commons统一管理    -->
+        <dependency>
+            <groupId>org.iproute</groupId>
+            <artifactId>commons</artifactId>
+            <version>${commons.version}</version>
+            <type>pom</type>
+        </dependency>
+
+        <!--    以下是当前工程独有的依赖管理    -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.iproute.commons</groupId>
+            <artifactId>config-files</artifactId>
+        </dependency>
+
+        <!--  feign 测试 -->
+        <dependency>
+            <groupId>org.iproute.template</groupId>
+            <artifactId>support</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

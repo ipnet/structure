@@ -1,0 +1,20 @@
+server:
+  port: 18001
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      server-addr: ${NACOS_SERVER_ADDR:127.0.0.1:8848}
+      username: ${NACOS_USERNAME:nacos}
+      password: ${NACOS_PASSWORD:nacos}
+      discovery:
+        namespace: ${NACOS_NAMESPACE:iproute}
+        group: ${NACOS_NAMESPACE:DEFAULT_GROUP}
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          # routing role
+          lower-case-service-id: true

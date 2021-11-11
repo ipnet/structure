@@ -1,0 +1,5 @@
+INSERT INTO `kms`.`post` ( `cover_image`, `images`, `title`, `content`, `like_counts`, `favorite_counts`,
+                          `share_counts`, `comment_counts`, `status`, `type`)
+VALUES ( 'http://oldfriends.oss-cn-hangzhou.aliyuncs.com/h5/talk/wk1108.png', NULL, '聊一聊卡车司机的双十一',
+        '<p><span style=\"font-size:14px;\"> 双十一剁手狂欢的背后是无数卡车司机的辛苦付出，每一份及时送达的快递，都是我们货运司机夜以继日奋战的结果，每一份延迟送达的快递，都可能是一场车祸或事故。请您发帖或评论聊一聊您的双十一是如何度过的？最长连续奋战了多少个小时，有一些什么样的经历？</span></p>\r\n<p align=\"justify\" class=\"p\" style=\"margin-top: 0pt; margin-bottom: 0pt; text-align: justify; font-family: 宋体; font-size: 12pt; color: rgb(0, 0, 0); background: rgb(253, 253, 253);\"><span style=\"font-family: 微软雅黑; letter-spacing: 0.4pt; font-size: 12pt;\"><o:p></o:p></span></p>\r\n<p align=\"justify\" class=\"p\" style=\"margin-top: 0pt; margin-bottom: 0pt; text-align: justify; font-family: 宋体; font-size: 12pt; color: rgb(0, 0, 0);\"><span style=\"font-family: 微软雅黑; font-size: 12pt;\"><o:p></o:p></span></p>\r\n<p><img src=\"http://oldfriends.oss-cn-hangzhou.aliyuncs.com/h5/talk/wk1108.png\" style=\"width:100%\" /></p>\r\n',
+        0, 0, 0, 0, NULL, 0);

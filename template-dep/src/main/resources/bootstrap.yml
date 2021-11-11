@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: template-dep
+  profiles:
+    include:
+      - basic
+      - mvc
+  cloud:
+    nacos:
+      server-addr: ${NACOS_SERVER_ADDR:127.0.0.1:8848}
+      username: ${NACOS_USERNAME:nacos}
+      password: ${NACOS_PASSWORD:nacos}
+      config:
+        namespace: ${NACOS_NAMESPACE:iproute}
+        group: ${NACOS_GROUP:DEFAULT_GROUP}
+        file-extension: yaml
+      discovery:
+        namespace: ${spring.cloud.nacos.config.namespace}
+        group: ${spring.cloud.nacos.config.group}
